@@ -9,6 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var numberONScreen:Double = 0;
+    
+    @IBOutlet weak var label: UILabel!
+    
+    @IBAction func numbers(_ sender: UIButton){
+        label.text = label.text!  + String(sender.tag-1)
+        numberONScreen = Double(label.text!)!
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
